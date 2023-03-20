@@ -1,14 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import Child from "./Child.js";
+import "./App.css";
+import { useState } from "react";
 
-function Header({title, num}) {
-  return <h1>Hello World {num} {title}</h1>;
-}
+function App() {
+  const date = new Date();
 
-function App({title, num}) {
   return (
-    <Header title={title} num={num}/>
-  )
-};
+    <div>
+      <Child message={date.toLocaleTimeString()} />
+    </div>
+  );
+}
 
 export default App;
