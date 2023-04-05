@@ -7,7 +7,8 @@ function App() {
   const date = new Date();
 
   return (
-    <div>
+    <div className="flex">
+      <h1>Current Time:</h1>
       <Child message={date.toLocaleTimeString()} />
     </div>
   );
